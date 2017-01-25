@@ -8,6 +8,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        String customerName = "Mike";
+        String clientName = "Odilya";
+        String message;
+        
+        message = customerName + " says Hallo to " + clientName;
+        
+        System.out.println(message);
+       
     }
 }
