@@ -30,6 +30,17 @@ public class App
        String brandonFirstName = brandonName.substring(0, spaceIndex);
        System.out.println("His first name is : " + brandonFirstName); 
        
+       System.out.println("\n------ ------ Little manipuation of string Builder -----\n");
+       
+       StringBuilder sb;
+       sb = new StringBuilder(stringOne);
+       System.out.println(sb);
+       sb.delete(0, sb.length() - 6);
+       System.out.println(sb);
+       sb.append(" ++ I have just appended this part of string");
+       System.out.println(sb);
+
+       
     }
 
 	private static void basicTest() {
