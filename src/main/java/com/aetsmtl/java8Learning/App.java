@@ -8,6 +8,18 @@ public class App
 {
     public static void main( String[] args )
     {
+       String s = "hello world";
+       System.out.println(s);
+       
+       s = s + " 1 ";
+       System.out.println(s);
+       
+       s = s.concat(" and what else");
+       System.out.println(s);
+       
+       s.concat(" with concatenation");
+       System.out.println(s);
+       System.out.println("Conclusion : String is immuable's object");
        
     }
 
