@@ -18,12 +18,20 @@ public class App
         
         boolean isTakeCB;
         
-        message = customerName + " says Hallo to " + clientName;
+        String[] items = {"car","screen","phone", "book","mouse", "cup"};
+        
+        message = customerName + ": Hallo " + clientName;
+        int numberOfItemsInSelling = items.length;
         
         total = priceCup*3 + priceScreen*5;
  
         System.out.println(message);
-        System.out.println(customerName + " : Your bill is " + total);
+        System.out.println(customerName +": We have " +numberOfItemsInSelling +" items in stock " );
+        for (String item : items){
+            System.out.print(item +" - ");
+        }
+       
+        System.out.println("\n"+ customerName + " : Your bill is " + total);
         
         if (total > 5000){
             System.out.println(clientName + ": " + total + "€! " + "its enought for me ");
@@ -37,9 +45,12 @@ public class App
             }
             {
             	System.out.println(customerName +": No, Sorry" );
-            	System.out.println(clientName +": Damn!... oops Sorry could you please remove some items?");
+            	System.out.println(clientName +": Damn!... oops Sorry :) Could you please remove some items?");
             }
         }
+        
+        
+        
         
     }
 }
