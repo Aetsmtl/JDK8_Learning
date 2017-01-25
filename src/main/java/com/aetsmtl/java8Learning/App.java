@@ -8,7 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        String customerName = "Mike";
+       
+    }
+
+	private static void basicTest() {
+		String customerName = "Mike";
         String clientName = "Odilya";
         String message;
         
@@ -48,9 +52,5 @@ public class App
             	System.out.println(clientName +": Damn!... oops Sorry :) Could you please remove some items?");
             }
         }
-        
-        
-        
-        
-    }
+	}
 }
