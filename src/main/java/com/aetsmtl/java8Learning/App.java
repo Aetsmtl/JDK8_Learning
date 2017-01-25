@@ -8,18 +8,27 @@ public class App
 {
     public static void main( String[] args )
     {
-       String s = "hello world";
-       System.out.println(s);
+       String stringOne = "Hello world";
+       String stringTwo = new String(" HEY ");
+       stringOne = stringOne.concat(" plus concat with space ");
+       System.out.println(stringOne);
        
-       s = s + " 1 ";
-       System.out.println(s);
+       stringOne = stringTwo + stringOne;
+       System.out.println("Print without trim : " +stringOne);
        
-       s = s.concat(" and what else");
-       System.out.println(s);
+       stringOne = (stringTwo + stringOne).trim();
+       System.out.println("Print after trim : " +stringOne);
        
-       s.concat(" with concatenation");
-       System.out.println(s);
-       System.out.println("Conclusion : String is immuable's object");
+       stringOne = ("Print in upper case : " +stringOne.toUpperCase());
+       System.out.println(stringOne);    
+       
+       System.out.println("\n------ ----- ------\n");    
+
+       String brandonName = "Brandon Sardou";
+       int spaceIndex = brandonName.indexOf(" ");
+       
+       String brandonFirstName = brandonName.substring(0, spaceIndex);
+       System.out.println("His first name is : " + brandonFirstName); 
        
     }
 
