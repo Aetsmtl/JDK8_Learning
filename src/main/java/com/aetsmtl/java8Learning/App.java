@@ -21,7 +21,14 @@ public class App
         total = priceCup*3 + priceScreen*5;
  
         System.out.println(message);
-        System.out.println("Your bill is " + total);
+        System.out.println(customerName + " : Your bill is " + total);
+        
+        if (total > 50){
+            System.out.println(clientName + ": " + total + "€! " + "its enought for me ");
+        }
+        else{
+            System.out.println(clientName +": ok Do you take CB?" );
+        }
         
     }
 }
