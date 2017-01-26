@@ -18,6 +18,23 @@ public class App
     	
     	String fWhatTimeIsIt = whatTimeIsIt.format(DateTimeFormatter.ISO_LOCAL_DATE);
     	System.out.println("With ISO_LOCAL_DATE format "+fWhatTimeIsIt);
+    	
+    	
+    	// --------------- utilization of Args Array ---------------
+    	if (args.length != 2){
+    		System.out.println("you should put exactly two argument to the program");
+    	}
+    	else
+    	{
+    		int firstArg = Integer.parseInt(args[0]);
+    		int secondArg = Integer.parseInt(args[1]);
+    		secondArg+= firstArg;
+
+    		System.out.println("The concat of two arguments is : " + firstArg + secondArg);
+    		System.out.println("The concat of two arguments is : " + secondArg) ;
+
+    	}
+    	
 
     }
 
