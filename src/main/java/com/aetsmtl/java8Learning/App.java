@@ -1,5 +1,7 @@
 package com.aetsmtl.java8Learning;
 
+import com.aetsmtl.java8Learning.soccerLeague.Player;
+
 /**
  * Hello world!
  *
@@ -8,7 +10,22 @@ public class App
 {
     public static void main( String[] args )
     {
-    	int firstCounter = 2;
+    	Player Azamba = new Player();
+    	System.out.println("Firstly I am " + Azamba.getName());
+    	
+    	if (Azamba.setName("Boris")){
+    		System.out.println("Now my name is " + Azamba.getName());
+    	}
+    	else{
+    		if(Azamba.setName("Aurel")){
+        		System.out.println("I am retrying to change my name to " + Azamba.getName());
+    		}
+    	}
+    	System.out.println("Finally, my name is " + Azamba.getName());
+    }
+
+	private static void basicDataTypeManipulation() {
+		int firstCounter = 2;
     	int secondCounter = 7;
     	
     	System.out.println("\n --- Incrementation --- \n");
@@ -49,8 +66,7 @@ public class App
     			System.out.println("First name : " + s.split(" ")[0]);
     		}
     	}
-       
-    }
+	}
 
 	private static void basicStringManipulation() {
 		String stringOne = "Hello world";
