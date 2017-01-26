@@ -35,6 +35,26 @@ public class App
 
     	}
     	
+    	// ---------------- While loop and Continue
+    	int[][] names = new int[5][7];
+    	for (int longr = 0; longr <5; longr++){
+    		for (int larg = 0; larg <7; larg++){
+        		names[longr][larg] = (int)(Math.random()*6 + 1);
+        	}
+    	}
+    	
+    	int descOne = 5;
+    	int descTwo = 7;
+    	while (descOne-- > 0){
+    		while(descTwo-- > 0){
+    			if (names[descOne][descTwo] > 3)
+    				System.out.print(" " + names[descOne][descTwo] +" ");
+    			else
+        			System.out.print(" - ");
+    		}
+    		descTwo = 7;
+    		System.out.println(" | ");
+    	}
 
     }
 
