@@ -8,40 +8,83 @@ public class App
 {
     public static void main( String[] args )
     {
-       String stringOne = "Hello world";
-       String stringTwo = new String(" HEY ");
-       stringOne = stringOne.concat(" plus concat with space ");
-       System.out.println(stringOne);
-       
-       stringOne = stringTwo + stringOne;
-       System.out.println("Print without trim : " +stringOne);
-       
-       stringOne = (stringTwo + stringOne).trim();
-       System.out.println("Print after trim : " +stringOne);
-       
-       stringOne = ("Print in upper case : " +stringOne.toUpperCase());
-       System.out.println(stringOne);    
-       
-       System.out.println("\n------ ----- ------\n");    
+    	int firstCounter = 2;
+    	int secondCounter = 7;
+    	
+    	System.out.println("\n --- Incrementation --- \n");
 
-       String brandonName = "Brandon Sardou";
-       int spaceIndex = brandonName.indexOf(" ");
-       
-       String brandonFirstName = brandonName.substring(0, spaceIndex);
-       System.out.println("His first name is : " + brandonFirstName); 
-       
-       System.out.println("\n------ ------ Little manipuation of string Builder -----\n");
-       
-       StringBuilder sb;
-       sb = new StringBuilder(stringOne);
-       System.out.println(sb);
-       sb.delete(0, sb.length() - 6);
-       System.out.println(sb);
-       sb.append(" ++ I have just appended this part of string");
-       System.out.println(sb);
+    	int newPostCounter = firstCounter++;
+    	System.out.println("PostIncrementation : " + newPostCounter);
+    	int  newPreCounter = --secondCounter;
+    	System.out.println("PreIncrementation : " + newPreCounter);
+    	
+    	System.out.println("\n --- Promotion and Casting concept --- \n");
+    	int alpha = 7;
+    	int beta = 3;
+    	double teta = alpha/beta;
+    	System.out.println("int 7 / int 3 -> wrong promotion : " + teta + "you should declare at least one "
+    			+ "of beta or alpha as double to have correct answer\n"
+    			+ "The effect will be same if you did int 3333 * int 5555 = double teta"
+    			+ "because the multipication will be -456789... ");
+    	
+  
+    	System.out.println("\n --- manipulation  --- \n");
+    	
+    	int intOne;
+    	long longOne = 88000000000L;
+    	float floatOne = 34.3F;
+    	char chOne = 'c';
+    	
+    	System.out.println("printing long Value : " +longOne);
+    	intOne = (int)longOne;
+    	System.out.println("Long value assigned to int : " +intOne +" <-");
+    	
+    	System.out.println("\n --- Reg expression  --- \n");
 
+    	String[] listOfName = {"Pierre Marie", "Jack Bauer", "Stephen Harper", "Barrack Obama"};
+    	
+    	for(String s : listOfName){
+    		if (s.matches(".*rr.*")){
+    			System.out.println(s);
+    			System.out.println("First name : " + s.split(" ")[0]);
+    		}
+    	}
        
     }
+
+	private static void basicStringManipulation() {
+		String stringOne = "Hello world";
+		   String stringTwo = new String(" HEY ");
+		   stringOne = stringOne.concat(" plus concat with space ");
+		   System.out.println(stringOne);
+		   
+		   stringOne = stringTwo + stringOne;
+		   System.out.println("Print without trim : " +stringOne);
+		   
+		   stringOne = (stringTwo + stringOne).trim();
+		   System.out.println("Print after trim : " +stringOne);
+		   
+		   stringOne = ("Print in upper case : " +stringOne.toUpperCase());
+		   System.out.println(stringOne);    
+		   
+		   System.out.println("\n------ ----- ------\n");    
+
+		   String brandonName = "Brandon Sardou";
+		   int spaceIndex = brandonName.indexOf(" ");
+		   
+		   String brandonFirstName = brandonName.substring(0, spaceIndex);
+		   System.out.println("His first name is : " + brandonFirstName); 
+		   
+		   System.out.println("\n------ ------ Little manipuation of string Builder -----\n");
+		   
+		   StringBuilder sb;
+		   sb = new StringBuilder(stringOne);
+		   System.out.println(sb);
+		   sb.delete(0, sb.length() - 6);
+		   System.out.println(sb);
+		   sb.append(" ++ I have just appended this part of string");
+		   System.out.println(sb);
+	}
 
 	private static void basicTest() {
 		String customerName = "Mike";
