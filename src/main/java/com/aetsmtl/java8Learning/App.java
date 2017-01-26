@@ -2,6 +2,7 @@ package com.aetsmtl.java8Learning;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 /**
  * Hello world!
@@ -11,7 +12,22 @@ public class App
 {
     public static void main( String[] args )
     {
-    	LocalDateTime whatTimeIsIt;
+    	ArrayList<String> item = new ArrayList<String>();
+    	item.add("Chocolate");
+    	item.add("Cacaouette");
+    	item.add("Coke");
+    	System.out.println(item);
+    	
+    	item.add(2, "Cash");
+    	System.out.println(item);
+    	
+    	item.remove(1);
+    	System.out.println(item);
+    	
+    }
+
+	private static void basicMethodForDateLoopManipulation(String[] args) {
+		LocalDateTime whatTimeIsIt;
     	whatTimeIsIt = LocalDateTime.now();
     	
     	System.out.println("Without format "+whatTimeIsIt);
@@ -55,8 +71,7 @@ public class App
     		descTwo = 7;
     		System.out.println(" | ");
     	}
-
-    }
+	}
 
 	private static void someManipulationSwitchternaryOperator() {
 		//Differentes methods with the same name but differents signatures -> Overloading
