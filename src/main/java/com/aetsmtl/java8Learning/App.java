@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
+import com.aetsmtl.java8Learning.inheritance.Porshe;
+
 /**
  * Hello world!
  *
@@ -12,7 +14,12 @@ public class App
 {
     public static void main( String[] args )
     {
-    	ArrayList<String> item = new ArrayList<String>();
+    	Porshe porsheOne = new Porshe("Carrera", "rouge", "16 Valves", "Gyovanni");
+    	System.out.print(porsheOne.toString());
+    }
+
+	private static void usingArrayList() {
+		ArrayList<String> item = new ArrayList<String>();
     	item.add("Chocolate");
     	item.add("Cacaouette");
     	item.add("Coke");
@@ -23,8 +30,7 @@ public class App
     	
     	item.remove(1);
     	System.out.println(item);
-    	
-    }
+	}
 
 	private static void basicMethodForDateLoopManipulation(String[] args) {
 		LocalDateTime whatTimeIsIt;
