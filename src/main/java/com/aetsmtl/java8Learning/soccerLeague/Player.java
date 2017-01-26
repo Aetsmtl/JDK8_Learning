@@ -10,15 +10,9 @@ public class Player {
 		this.name = "No name";
 	}
 	
-	public boolean setName(String name) {
+	public void setName(String name) {
 		
-		if (name.startsWith("A")){
 			this.name = name;
-			return true;
-		}
-		else{
-			return false;
-		}
 	}
 	
 	public String getName() {

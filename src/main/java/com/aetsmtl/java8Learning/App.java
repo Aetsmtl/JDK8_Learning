@@ -10,10 +10,33 @@ public class App
 {
     public static void main( String[] args )
     {
-    	Player Azamba = new Player();
+    	//Differentes methods with the same name but differents signatures -> Overloading
+    	System.out.println("La somme de 1 et 3 est : " + sum ( 1, 3));
+    	System.out.println("La somme de 1.7 et 8 est : " + sum (1.7, 8));
+    	System.out.println("La somme de 2 fois 55.5 est :" + sum (55.5F));
+    	
+    	for (int count=0 ; count < 10; count++){
+    		int numberGeneratd = (int)(Math.random()*23 + 1);
+    		System.out.println("ex "+ count + " : " + numberGeneratd);
+    	}
+    	
+    }
+    
+    private static int sum (int a , int b){
+    	return a + b;
+    }
+    private static double sum (double a, int b){
+    	return a + b;
+    }
+    private static float sum (float a){
+    	return a + a;
+    }
+
+	private static void simpleMethodManipulation() {
+		Player Azamba = new Player();
     	System.out.println("Firstly I am " + Azamba.getName());
     	
-    	if (Azamba.setName("Boris")){
+    	/*if (Azamba.setName("Boris")){
     		System.out.println("Now my name is " + Azamba.getName());
     	}
     	else{
@@ -21,8 +44,8 @@ public class App
         		System.out.println("I am retrying to change my name to " + Azamba.getName());
     		}
     	}
-    	System.out.println("Finally, my name is " + Azamba.getName());
-    }
+    	System.out.println("Finally, my name is " + Azamba.getName());*/
+	}
 
 	private static void basicDataTypeManipulation() {
 		int firstCounter = 2;
