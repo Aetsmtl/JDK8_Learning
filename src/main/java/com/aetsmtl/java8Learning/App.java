@@ -1,5 +1,8 @@
 package com.aetsmtl.java8Learning;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Hello world!
  *
@@ -8,7 +11,18 @@ public class App
 {
     public static void main( String[] args )
     {
-    	//Differentes methods with the same name but differents signatures -> Overloading
+    	LocalDateTime whatTimeIsIt;
+    	whatTimeIsIt = LocalDateTime.now();
+    	
+    	System.out.println("Without format "+whatTimeIsIt);
+    	
+    	String fWhatTimeIsIt = whatTimeIsIt.format(DateTimeFormatter.ISO_LOCAL_DATE);
+    	System.out.println("With ISO_LOCAL_DATE format "+fWhatTimeIsIt);
+
+    }
+
+	private static void someManipulationSwitchternaryOperator() {
+		//Differentes methods with the same name but differents signatures -> Overloading
     	System.out.println("La somme de 1 et 3 est : " + sum ( 1, 3));
     	System.out.println("La somme de 1.7 et 8 est : " + sum (1.7, 8));
     	System.out.println("La somme de 2 fois 55.5 est :" + sum (55.5F));
@@ -50,15 +64,16 @@ public class App
     		}
     	
     	}
-      
-    }
+	}
     
     private static int sum (int a , int b){
     	return a + b;
     }
+
     private static double sum (double a, int b){
     	return a + b;
     }
+    
     private static float sum (float a){
     	return a + a;
     }
