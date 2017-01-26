@@ -1,7 +1,5 @@
 package com.aetsmtl.java8Learning;
 
-import com.aetsmtl.java8Learning.soccerLeague.Player;
-
 /**
  * Hello world!
  *
@@ -15,11 +13,44 @@ public class App
     	System.out.println("La somme de 1.7 et 8 est : " + sum (1.7, 8));
     	System.out.println("La somme de 2 fois 55.5 est :" + sum (55.5F));
     	
-    	for (int count=0 ; count < 10; count++){
-    		int numberGeneratd = (int)(Math.random()*23 + 1);
-    		System.out.println("ex "+ count + " : " + numberGeneratd);
+    	int count = 0;
+    	int[] datas = new int[10];
+    	for (count=0 ; count < 10; count++){
+    		int numberGenerated = (int)(Math.random()*5);
+    		System.out.println("ex "+ count + " : " + numberGenerated);
+    		datas[count] = numberGenerated;
     	}
     	
+    	// ------> Ternary operator
+    	
+    	boolean beauty = false;
+    	if (beauty){
+        	System.out.println("this is a beautiful Guy :-)");
+    	}
+    	else{
+        	System.out.println("This guy is no very beautiful xD");
+    	}
+    	
+    	String s = (beauty = true) ? "this is a beautiful Guy :-)": "This guy is no very beautiful xD";
+    	System.out.println(s);
+
+    	// -------> Switch case
+    	for (int i=0; i<10; i++){
+    		
+    		switch (datas[i]){
+    		case 2 : 
+    			//Actions
+    			System.out.println("got 2"); 
+    			break;
+    		case 0 : System.out.println("got 0"); break;
+    		case 3 : System.out.println("got 3"); break;
+    		
+    		default : System.out.println("Nothing got");
+    		
+    		}
+    	
+    	}
+      
     }
     
     private static int sum (int a , int b){
@@ -33,10 +64,11 @@ public class App
     }
 
 	private static void simpleMethodManipulation() {
-		Player Azamba = new Player();
+		
+		/*Player Azamba = new Player();
     	System.out.println("Firstly I am " + Azamba.getName());
     	
-    	/*if (Azamba.setName("Boris")){
+    	if (Azamba.setName("Boris")){
     		System.out.println("Now my name is " + Azamba.getName());
     	}
     	else{

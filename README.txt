@@ -1,4 +1,4 @@
-if I want to make my JAR excecutable, I have to put it in my pom.xml
+# if I want to make my JAR excecutable, I have to put it in my pom.xml
   <build>
 	<plugins>
 	  <plugin>
@@ -28,4 +28,8 @@ if I want to make my JAR excecutable, I have to put it in my pom.xml
 	</plugins>
   </build>
 
+# Do not forget to use the debugger, Breakpoint, continouis, step into, step Over, ...
+# See what its containned into variable
+# Etc... 
+# Also method hierachy; practical to follow the execution of loop and so on!
 
