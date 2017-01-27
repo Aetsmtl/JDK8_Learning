@@ -4,7 +4,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
+import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
+import com.aetsmtl.java8Learning.inheritance.Vehicule;
 
 /**
  * Hello world!
@@ -14,8 +16,13 @@ public class App
 {
     public static void main( String[] args )
     {
-    	Porshe porsheOne = new Porshe("Carrera", "rouge", "16 Valves", "Gyovanni");
-    	System.out.print(porsheOne.toString());
+    	Vehicule porsheOne = new Porshe("Carrera", "rouge", "16 Valves", "Gyovanni");
+    	porsheOne.accelerate();
+    	
+    	// ---- Same name of method differents results
+    	Vehicule peugeotOne = new Peugeot("gris", "3 Valves", "Dominique Du Penis");
+    	peugeotOne.accelerate();
+    	
     }
 
 	private static void usingArrayList() {

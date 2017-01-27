@@ -14,4 +14,11 @@ public class Porshe extends Vehicule {
 		// TODO Auto-generated method stub
 		return  nameConstructor.toUpperCase() + " is the constructor\n" + super.toString();
 	}
+	
+	@Override
+	public void accelerate() {
+		// TODO Auto-generated method stub
+		super.accelerate();
+		System.out.println("Because I'm a Porse, I can go faster than this 200Km/h... Yeah!");
+	}
 }
