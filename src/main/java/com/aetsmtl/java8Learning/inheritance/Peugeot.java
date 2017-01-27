@@ -2,6 +2,7 @@ package com.aetsmtl.java8Learning.inheritance;
 
 public class Peugeot extends Vehicule{
 
+	
 	public Peugeot(String color, String typeEngine, String owner) {
 		super(color, typeEngine, owner);
 		// TODO Auto-generated constructor stub

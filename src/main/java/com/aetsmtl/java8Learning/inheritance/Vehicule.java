@@ -5,6 +5,7 @@ public class Vehicule extends Auto {
 	protected String color;
 	protected String typeEngine;
 	protected String owner;
+	protected int wheel;
 	
 	public Vehicule(String color, String typeEngine, String owner) {
 		super();

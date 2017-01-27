@@ -19,17 +19,36 @@ public class App
 {
     public static void main( String[] args )
     {
+    	// Initializing Data
+    	List<Vehicule> vehicule = new ArrayList<Vehicule>();
+    	Porshe pOne = new Porshe("PorsheX","green", "volvo23", "Boris");
+    	Peugeot pTwo = new Peugeot("greenE", "volvo23", "Arnold");
+    	Porshe pThree = new Porshe("PorsheZ","Red", "volvo23", "Patrick");
+    	Peugeot pFour = new Peugeot("greenA", "volvo23", "Roger");
+    	
+    	vehicule.add(pOne);
+    	vehicule.add(pTwo);
+    	vehicule.add(pThree);
+    	vehicule.add(pFour);
+    	
+    	// using predication (Lambda)
+    	System.out.println ("before appliction of filter \n" + vehicule );
+    	vehicule.removeIf(f -> f instanceof Peugeot);
+    	System.out.println ("\n\n\nAfter appliction of filter \n" + vehicule );
+    	
+    	// using functionnal interface and lambda expression
+    	
     	// Example of using List, ArrayList, which extend AbstractArrayList and implement a lot of interface
-    	String[] weekDayArray = {"monday", "tuesday","wednesday","thursday","friday","saturday","sunday"};
+        String[] weekDayArray = {" monday ", " tuesday "," wednesday "," thursday "," friday "," saturday "," sunday "};
     	
     	ArrayList<String> weekDayList = new ArrayList<String>(Arrays.asList(weekDayArray));
     	
     	for (String s : weekDayList){
     		if (s.trim().equals("sunday")){
-    			System.out.println(s.toUpperCase());	
+    			System.out.println("\n"+ s.toUpperCase());	
     		}
     		else {
-    			System.out.print(s);	
+    			System.out.print("\n" + s);	
     		}
     	}
     }
