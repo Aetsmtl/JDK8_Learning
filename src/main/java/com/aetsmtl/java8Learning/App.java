@@ -3,6 +3,7 @@ package com.aetsmtl.java8Learning;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.aetsmtl.java8Learning.inheritance.Auto;
@@ -18,7 +19,23 @@ public class App
 {
     public static void main( String[] args )
     {
-    	Vehicule porsheOne = new Porshe("Carrera", "rouge", "16 Valves", "Gyovanni");
+    	// Example of using List, ArrayList, which extend AbstractArrayList and implement a lot of interface
+    	String[] weekDayArray = {"monday", "tuesday","wednesday","thursday","friday","saturday","sunday"};
+    	
+    	ArrayList<String> weekDayList = new ArrayList<String>(Arrays.asList(weekDayArray));
+    	
+    	for (String s : weekDayList){
+    		if (s.trim().equals("sunday")){
+    			System.out.println(s.toUpperCase());	
+    		}
+    		else {
+    			System.out.print(s);	
+    		}
+    	}
+    }
+
+	private static void simpleInheritanceCase() {
+		Vehicule porsheOne = new Porshe("Carrera", "rouge", "16 Valves", "Gyovanni");
     	porsheOne.accelerate();
     	
     	// ---- Same name of method differents results
@@ -44,10 +61,7 @@ public class App
         		
         	}
     	}
-    	
-    	
-    	
-    }
+	}
 
 	private static void usingArrayList() {
 		ArrayList<String> item = new ArrayList<String>();

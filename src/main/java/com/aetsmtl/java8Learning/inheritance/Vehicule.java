@@ -24,7 +24,6 @@ public class Vehicule extends Auto {
 		System.out.println("From Vehicule class,I'm accelerating... 100Km/h");
 	}
 
-	
 	@Override
 	public void vidange() {
 		// TODO Auto-generated method stub
