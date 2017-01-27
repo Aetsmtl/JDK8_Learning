@@ -3,7 +3,9 @@ package com.aetsmtl.java8Learning;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 
+import com.aetsmtl.java8Learning.inheritance.Auto;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
@@ -22,6 +24,28 @@ public class App
     	// ---- Same name of method differents results
     	Vehicule peugeotOne = new Peugeot("gris", "3 Valves", "Dominique Du Penis");
     	peugeotOne.accelerate();
+    	
+    	// ---- Test of instance of
+    	List<Vehicule> parc = new ArrayList<Vehicule>();
+    	parc.add(porsheOne);
+    	parc.add(peugeotOne);
+    	
+    	for (Vehicule v : parc){
+    		
+    		char c = (v instanceof Peugeot) ? 'P' : 'V'; 
+        	switch (c){
+        	case 'P' : 
+        		System.out.println("On a une instance de peugeot"); 
+        		Peugeot p = (Peugeot)v; 
+        		p.vidange();
+        		break;
+        	default :
+        		System.out.println ("Une occurence d'autre chose");
+        		
+        	}
+    	}
+    	
+    	
     	
     }
 

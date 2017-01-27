@@ -1,6 +1,6 @@
 package com.aetsmtl.java8Learning.inheritance;
 
-public class Vehicule {
+public class Vehicule extends Auto {
 
 	protected String color;
 	protected String typeEngine;
@@ -22,6 +22,13 @@ public class Vehicule {
 	
 	public void accelerate (){
 		System.out.println("From Vehicule class,I'm accelerating... 100Km/h");
+	}
+
+	
+	@Override
+	public void vidange() {
+		// TODO Auto-generated method stub
+		System.out.print("place on board from Abtract class : " + super.getPlaceOnBoard());
 	}
 	
 }
