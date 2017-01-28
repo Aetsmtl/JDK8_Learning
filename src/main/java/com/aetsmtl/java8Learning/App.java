@@ -11,6 +11,8 @@ import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
 
+import exceptionHandling.Calculator;
+
 /**
  * Hello world!
  *
@@ -51,6 +53,18 @@ public class App
     			System.out.print("\n" + s);	
     		}
     	}
+    	
+    	// Excetion Handling and Cacthcing
+    	Calculator calculatorDiv = new Calculator(78, 0);
+    	try {
+        	System.out.println(calculatorDiv.divide());
+    		System.out.println("Calculation successful");
+    	}
+    	catch(ArithmeticException aE){
+    		System.out.println("Error found in : " + aE.getMessage());
+    	}
+    	
+    	
     }
 
 	private static void simpleInheritanceCase() {
