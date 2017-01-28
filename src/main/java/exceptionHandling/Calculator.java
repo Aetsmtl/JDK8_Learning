@@ -14,4 +14,5 @@ public class Calculator {
 	public int divide (){
 		return (int)firstParameter/(int)secontParameter;
 	}
+	
 }

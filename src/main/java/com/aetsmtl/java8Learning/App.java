@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.aetsmtl.java8Learning.inheritance.Auto;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
@@ -21,7 +20,22 @@ public class App
 {
     public static void main( String[] args )
     {
-    	// Initializing Data
+    	simpleInheritanceCase();
+    	usingArrayList();
+    	simpleUsingExceptionLambdaExpressionEtc();
+    	basicDataTypeManipulation();
+    	basicStringManipulation();
+    	basicMethodForDateLoopManipulation(args);
+    	basicTest();
+    	someManipulationSwitchternaryOperator();
+    	sum(9);
+    	sum(78, 2);
+    	simpleMethodManipulation();
+    	
+    }
+
+	private static void simpleUsingExceptionLambdaExpressionEtc() {
+		// Initializing Data
     	List<Vehicule> vehicule = new ArrayList<Vehicule>();
     	Porshe pOne = new Porshe("PorsheX","green", "volvo23", "Boris");
     	Peugeot pTwo = new Peugeot("greenE", "volvo23", "Arnold");
@@ -54,18 +68,16 @@ public class App
     		}
     	}
     	
-    	// Excetion Handling and Cacthcing
+    	// Excetion Handling and Catching
     	Calculator calculatorDiv = new Calculator(78, 0);
     	try {
         	System.out.println(calculatorDiv.divide());
     		System.out.println("Calculation successful");
     	}
     	catch(ArithmeticException aE){
-    		System.out.println("Error found in : " + aE.getMessage());
+    		System.out.println("Error was found in : " + aE.getMessage());
     	}
-    	
-    	
-    }
+	}
 
 	private static void simpleInheritanceCase() {
 		Vehicule porsheOne = new Porshe("Carrera", "rouge", "16 Valves", "Gyovanni");
@@ -255,8 +267,8 @@ public class App
     	
     	int intOne;
     	long longOne = 88000000000L;
-    	float floatOne = 34.3F;
-    	char chOne = 'c';
+    	// float floatOne = 34.3F;
+    	// char chOne = 'c';
     	
     	System.out.println("printing long Value : " +longOne);
     	intOne = (int)longOne;

@@ -1,5 +1,6 @@
 package com.aetsmtl.java8Learning.inheritance;
 
+
 public abstract class Auto {
 
 	private int wheels = 3;
@@ -14,5 +15,9 @@ public abstract class Auto {
 	
 	public int getPlaceOnBoard() {
 		return placeOnBoard;
+	}
+	
+	public int getWheels() {
+		return wheels;
 	}
 }
