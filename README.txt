@@ -37,3 +37,6 @@
 You cloud declared Main class in the manifest.mf to tell where is the main class in the JAR
 After that you could start your application by java -jar <nameofjar.jar>
 
+-
+Client-Server architecture
+two tier or three tier architechture
