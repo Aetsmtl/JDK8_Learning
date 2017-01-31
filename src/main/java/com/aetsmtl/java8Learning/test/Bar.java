@@ -12,5 +12,16 @@ public class Bar extends Foo{
 		sum += result;
 		
 	}
+	/*if you change visibility from pubic to private (less visible than his parent-class)
+	 * (non-Javadoc)
+	 * @see com.aetsmtl.java8Learning.demo.Foo#getDetail()
+	 * You will get error.
+	 */
+	
+	@Override
+	public String getDetail() {
+		// TODO Auto-generated method stub
+		return super.getDetail() + " And sum is " + sum;
+	}
 
 }

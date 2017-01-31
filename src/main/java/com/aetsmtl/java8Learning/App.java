@@ -6,10 +6,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.aetsmtl.java8Learning.demo.Foo;
 import com.aetsmtl.java8Learning.exceptionHandling.Calculator;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
+import com.aetsmtl.java8Learning.test.Bar;
 
 /**
  * Hello world!
@@ -19,6 +21,12 @@ public class App
 {
     public static void main( String[] args )
     {
+    	System.out.println((new Foo()).getDetail());
+    	System.out.println((new Bar()).getDetail());
+    	
+    	System.out.println("");
+    	System.out.println("");
+    	
     	simpleInheritanceCase();
     	usingArrayList();
     	simpleUsingExceptionLambdaExpressionEtc();
