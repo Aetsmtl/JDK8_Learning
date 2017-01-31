@@ -12,7 +12,6 @@ public abstract class Auto {
 	public void onBoard(){
 		
 	}
-	
 	public int getPlaceOnBoard() {
 		return placeOnBoard;
 	}

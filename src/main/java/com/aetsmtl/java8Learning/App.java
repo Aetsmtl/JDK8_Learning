@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.aetsmtl.java8Learning.designPattern.decorateur.Ds;
+import com.aetsmtl.java8Learning.designPattern.decorateur.DsAvecToitOuvrantDecorator;
+import com.aetsmtl.java8Learning.designPattern.decorateur.Voiture;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
@@ -20,6 +23,10 @@ public class App
 {
     public static void main( String[] args )
     {
+    	Voiture ds = new Ds();
+		Voiture dsOption = new DsAvecToitOuvrantDecorator(ds);
+		System.out.println(dsOption.getPoids()+" - "+dsOption.getPrix());
+    	
     	simpleInheritanceCase();
     	usingArrayList();
     	simpleUsingExceptionLambdaExpressionEtc();
