@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.aetsmtl.java8Learning.exceptionHandling.Calculator;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
-
-import exceptionHandling.Calculator;
 
 /**
  * Hello world!

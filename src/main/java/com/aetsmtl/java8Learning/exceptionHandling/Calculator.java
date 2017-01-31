@@ -1,6 +1,6 @@
-package exceptionHandling;
+package com.aetsmtl.java8Learning.exceptionHandling;
 
-public class Calculator {
+public class Calculator{
 
 	double firstParameter;
 	double secontParameter;
@@ -14,5 +14,7 @@ public class Calculator {
 	public int divide (){
 		return (int)firstParameter/(int)secontParameter;
 	}
+	
+	
 	
 }

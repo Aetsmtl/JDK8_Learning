@@ -3,6 +3,7 @@ package com.aetsmtl.java8Learning.inheritance;
 public class Porshe extends Vehicule {
 
 	protected String nameConstructor;
+	int serialNum;
 	
 	public Porshe(String nameConstructor, String color, String typeEngine, String owner) {
 		super(color, typeEngine, owner);
@@ -21,4 +22,5 @@ public class Porshe extends Vehicule {
 		super.accelerate();
 		System.out.println("Because I'm a Porse, I can go faster than this 200Km/h... Yeah!");
 	}
+	
 }
