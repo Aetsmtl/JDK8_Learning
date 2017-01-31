@@ -27,6 +27,23 @@ public class App
     	System.out.println("");
     	System.out.println("");
     	
+    	//Using Static keyword
+    	
+    	System.out.println("");
+    	System.out.println("");
+    	Bar b = new Bar();
+    	
+    	for (int i=0; i<5; i++){
+    		if (b.footer[i]){
+    			System.out.println("1");
+    		}
+    		else {
+    			System.out.println("0");
+    		}
+    	}
+    
+    	
+    
     	simpleInheritanceCase();
     	usingArrayList();
     	simpleUsingExceptionLambdaExpressionEtc();

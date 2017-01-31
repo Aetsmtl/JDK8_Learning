@@ -6,6 +6,19 @@ public class Bar extends Foo{
 	
 	private int sum = 10;
 	
+	public static final boolean[] footer = new boolean[5];
+	
+	static{
+		for (int i=0 ; i<5; i++){
+			footer[i] = true;
+		}
+	}
+	
+	static{
+		footer[1] = false;
+		footer[4] = false;
+	}
+	
 	public void reportSum(){
 		
 		// sum = sum + num; error cause by visibility of this field (to be set to protected)
@@ -18,10 +31,13 @@ public class Bar extends Foo{
 	 * You will get error.
 	 */
 	
+	 
 	@Override
 	public String getDetail() {
 		// TODO Auto-generated method stub
 		return super.getDetail() + " And sum is " + sum;
 	}
+	
+	
 
 }

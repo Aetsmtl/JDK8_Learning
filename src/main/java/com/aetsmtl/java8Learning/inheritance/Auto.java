@@ -20,4 +20,5 @@ public abstract class Auto {
 	public int getWheels() {
 		return wheels;
 	}
+	
 }
