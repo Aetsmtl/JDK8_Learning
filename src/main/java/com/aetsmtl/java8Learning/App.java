@@ -45,16 +45,38 @@ public class App
     	
     
     	simpleInheritanceCase();
+    	System.out.println("");
+    	System.out.println("");
     	usingArrayList();
+    	System.out.println("");
+    	System.out.println("");
     	simpleUsingExceptionLambdaExpressionEtc();
+    	System.out.println("");
+    	System.out.println("");
     	basicDataTypeManipulation();
+    	System.out.println("");
+    	System.out.println("");
     	basicStringManipulation();
+    	System.out.println("");
+    	System.out.println("");
     	basicMethodForDateLoopManipulation(args);
+    	System.out.println("");
+    	System.out.println("");
     	basicTest();
+    	System.out.println("");
+    	System.out.println("");
     	someManipulationSwitchternaryOperator();
+    	System.out.println("");
+    	System.out.println("");
+    	System.out.println("");
+    	System.out.println("");
     	sum(9);
     	sum(78, 2);
+    	System.out.println("");
+    	System.out.println("");
     	simpleMethodManipulation();
+    	System.out.println("");
+    	System.out.println("");
     	
     }
 
