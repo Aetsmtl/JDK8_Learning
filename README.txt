@@ -40,3 +40,5 @@ After that you could start your application by java -jar <nameofjar.jar>
 -
 Client-Server architecture
 two tier or three tier architechture
+
+# Final references must always reference the same object, but the contents of that object may be modified 
