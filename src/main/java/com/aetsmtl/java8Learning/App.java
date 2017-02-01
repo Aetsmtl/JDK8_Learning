@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.aetsmtl.java8Learning.demo.Foo;
+import com.aetsmtl.java8Learning.demo.PowerState;
 import com.aetsmtl.java8Learning.exceptionHandling.Calculator;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
@@ -21,6 +22,14 @@ public class App
 {
     public static void main( String[] args )
     {
+    	// --enums
+    	Foo firstFoo = new Foo();
+    	System.out.println(firstFoo.getState(PowerState.OFF));
+    	System.out.println(firstFoo.getState(PowerState.ON));
+    	
+    	System.out.println("");
+    	System.out.println("");
+    	
     	System.out.println((new Foo()).getDetail());
     	System.out.println((new Bar()).getDetail());
     	
