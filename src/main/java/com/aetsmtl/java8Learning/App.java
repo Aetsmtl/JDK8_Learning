@@ -5,7 +5,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import com.aetsmtl.java8Learning.demo.Foo;
@@ -90,7 +92,7 @@ public class App
     	System.out.println("");
     	System.out.println("");
     	
-    	// Using Set
+    	// Using Set with treeSet
     	Set<String> mySet = new TreeSet<>();
     	mySet.add("One");
     	mySet.add("Two");
@@ -101,6 +103,23 @@ public class App
     	for (String s : mySet){
     		System.out.println("item : " + s);
     	}	
+    	
+    	
+    	// using Map with treeMap
+    	Map<String, String> myMap = new TreeMap<>();
+    	myMap.put("s001", "AShlumberger");
+    	myMap.put("s002", "Phone6S");
+    	myMap.put("h001", "ZoneDeRap");
+    	
+    	myMap.put("s002", "Nokia-XP");
+    	
+    	Set<String> myKey = myMap.keySet();
+    	
+    	for (String s : myKey){
+    		System.out.println("Key : " + s + " value : " + myMap.get(s));
+    	}
+    	
+    	
     }
 
 	private static void simpleUsingExceptionLambdaExpressionEtc() {
