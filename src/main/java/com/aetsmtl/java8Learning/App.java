@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.Deque;
 import java.util.ArrayDeque;
 import java.lang.Math;
@@ -137,14 +139,16 @@ public class App
     	}
     	
     	// -- Using Stream and lambda Expression
-    	Person personOne = new Person("Mathias", "Paris", "76 rue Fevre", 9);
+    	Person personOne = new Person("Mathias", "Paris", "6 rue Fevre", 9);
     	Person personTwo = new Person("Zaïda", "Madrid", "76 rue efscq", 3);
-    	Person personThree = new Person("Adam", "Paris", "76 rue Foll", 17);
+    	Person personThree = new Person("Adam", "Paris", "7 rue Foll", 17);
     	Person personFour = new Person("Abdel", "Bruxelle", "59 rue Gloria", 5);
+    	Person personFith = new Person("Roger", "Paris", "76 rue richFoll", 1);
+    	Person personSixth = new Person("Mom", "Bruxelle", "5 rue Halljkqnfjk", 12);
     	
     	List<Person> lPerson = new ArrayList<Person>();
-    	lPerson.add(personFour); lPerson.add(personTwo);
-    	lPerson.add(personOne); lPerson.add(personThree);
+    	lPerson.add(personFour); lPerson.add(personTwo); lPerson.add(personSixth); 
+    	lPerson.add(personOne); lPerson.add(personThree); lPerson.add(personFith); 
     	
     	lPerson.stream()
     	.filter(p -> p.getSurname().equals("Paris"))
@@ -154,6 +158,33 @@ public class App
     	//.forEach(p -> Math::pow(p.getAge)));
     	
     	System.out.println(lPerson);
+    	
+    	// Using Predicate with Stream and ForEach
+    	Predicate<Person> bruxPerson = (p -> p.getSurname().equals("Bruxelle"));
+    	
+    	System.out.println("predicate used with ForEach loop");
+    	for (Person p : lPerson){
+    		if (bruxPerson.test(p)){
+    			System.out.println(p);
+    		}
+    	}
+    	
+    	System.out.println("predicate used with Stream");
+    	lPerson.stream()
+    	.filter(bruxPerson)
+    	.forEach(p -> System.out.println(p));
+
+    	Consumer<Person> adressConsumer = (p -> System.out.println("Adress : "+ p.getAddress()));
+    	
+    	System.out.println("Consumer used with ForEach loop");
+    	for (Person p : lPerson){
+    		adressConsumer.accept(p);
+    	}
+    	
+    	System.out.println("Consumer used with Stream");
+    	lPerson.stream()
+    	.forEach(adressConsumer);
+    	
     }
 
 	private static void simpleUsingExceptionLambdaExpressionEtc() {
