@@ -47,3 +47,7 @@ Static import like " import static java.lang.Math.*" make static field and varia
 -
 Dequeu Double endend Queue pronounced DECK
 
+-
+Builder Pattern to facilitate the creation of object
+
+

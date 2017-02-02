@@ -11,6 +11,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Deque;
 import java.util.ArrayDeque;
+import java.lang.Math;
 
 import com.aetsmtl.java8Learning.demo.Foo;
 import com.aetsmtl.java8Learning.demo.PowerState;
@@ -18,6 +19,7 @@ import com.aetsmtl.java8Learning.exceptionHandling.Calculator;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
+import com.aetsmtl.java8Learning.stream.Person;
 import com.aetsmtl.java8Learning.test.Bar;
 
 /**
@@ -121,7 +123,7 @@ public class App
     		System.out.println("Key : " + s + " value : " + myMap.get(s));
     	}
     	
-    	// Using Deque
+    	// -- Using Deque
     	Deque<String> myDeque = new ArrayDeque<>();
     	myDeque.push("firstElement");
     	myDeque.push("secondElement");
@@ -134,6 +136,24 @@ public class App
     		size--;
     	}
     	
+    	// -- Using Stream and lambda Expression
+    	Person personOne = new Person("Mathias", "Paris", "76 rue Fevre", 9);
+    	Person personTwo = new Person("Zaïda", "Madrid", "76 rue efscq", 3);
+    	Person personThree = new Person("Adam", "Paris", "76 rue Foll", 17);
+    	Person personFour = new Person("Abdel", "Bruxelle", "59 rue Gloria", 5);
+    	
+    	List<Person> lPerson = new ArrayList<Person>();
+    	lPerson.add(personFour); lPerson.add(personTwo);
+    	lPerson.add(personOne); lPerson.add(personThree);
+    	
+    	lPerson.stream()
+    	.filter(p -> p.getSurname().equals("Paris"))
+    	.filter(p -> p.getAge() > 10)
+    	//.forEach(p -> p.setAge(0))
+    	.forEach(p -> System.out.print("\n" + p.getNom().toUpperCase()+"\n"));
+    	//.forEach(p -> Math::pow(p.getAge)));
+    	
+    	System.out.println(lPerson);
     }
 
 	private static void simpleUsingExceptionLambdaExpressionEtc() {
