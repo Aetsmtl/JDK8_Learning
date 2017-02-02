@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.Deque;
+import java.util.ArrayDeque;
 
 import com.aetsmtl.java8Learning.demo.Foo;
 import com.aetsmtl.java8Learning.demo.PowerState;
@@ -105,7 +107,7 @@ public class App
     	}	
     	
     	
-    	// using Map with treeMap
+    	// Using Map with treeMap
     	Map<String, String> myMap = new TreeMap<>();
     	myMap.put("s001", "AShlumberger");
     	myMap.put("s002", "Phone6S");
@@ -119,6 +121,18 @@ public class App
     		System.out.println("Key : " + s + " value : " + myMap.get(s));
     	}
     	
+    	// Using Deque
+    	Deque<String> myDeque = new ArrayDeque<>();
+    	myDeque.push("firstElement");
+    	myDeque.push("secondElement");
+    	myDeque.push("thirthElement");
+    	myDeque.push("fourthElement");
+    	
+    	int size = myDeque.size();
+    	while (size > 0){
+    		System.out.println("Item : " + myDeque.pop());
+    		size--;
+    	}
     	
     }
 

@@ -44,5 +44,6 @@ two tier or three tier architechture
 --- 
 Static import like " import static java.lang.Math.*" make static field and variable avaible without classname.
 
-
+-
+Dequeu Double endend Queue pronounced DECK
 
