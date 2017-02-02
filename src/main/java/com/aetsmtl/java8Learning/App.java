@@ -5,6 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import com.aetsmtl.java8Learning.demo.Foo;
 import com.aetsmtl.java8Learning.demo.PowerState;
@@ -22,8 +24,9 @@ public class App
 {
     public static void main( String[] args )
     {
-    	// --enums
+    	// -- enums
     	Foo firstFoo = new Foo();
+    	
     	System.out.println(firstFoo.getState(PowerState.OFF));
     	System.out.println(firstFoo.getState(PowerState.ON));
     	
@@ -87,6 +90,17 @@ public class App
     	System.out.println("");
     	System.out.println("");
     	
+    	// Using Set
+    	Set<String> mySet = new TreeSet<>();
+    	mySet.add("One");
+    	mySet.add("Two");
+    	mySet.add("Three");
+    	//mySet.add(null);
+    	mySet.add("Three");
+    	
+    	for (String s : mySet){
+    		System.out.println("item : " + s);
+    	}	
     }
 
 	private static void simpleUsingExceptionLambdaExpressionEtc() {
