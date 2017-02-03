@@ -21,6 +21,7 @@ import com.aetsmtl.java8Learning.exceptionHandling.Calculator;
 import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
+import com.aetsmtl.java8Learning.io.CharStream;
 import com.aetsmtl.java8Learning.stream.Person;
 import com.aetsmtl.java8Learning.test.Bar;
 
@@ -184,6 +185,12 @@ public class App
     	System.out.println("Consumer used with Stream");
     	lPerson.stream()
     	.forEach(adressConsumer);
+    	
+    	
+    	// IO 
+    	System.out.println(" ");
+    	CharStream cs = new CharStream();
+    	cs.testMethod(args);
     	
     }
 

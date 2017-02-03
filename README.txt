@@ -50,4 +50,5 @@ Dequeu Double endend Queue pronounced DECK
 -
 Builder Pattern to facilitate the creation of object
 
-
+-
+You can control if Asserts are ealuated at runtime by add -ea option during running application
