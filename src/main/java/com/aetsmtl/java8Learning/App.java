@@ -22,6 +22,7 @@ import com.aetsmtl.java8Learning.inheritance.Peugeot;
 import com.aetsmtl.java8Learning.inheritance.Porshe;
 import com.aetsmtl.java8Learning.inheritance.Vehicule;
 import com.aetsmtl.java8Learning.io.CharStream;
+import com.aetsmtl.java8Learning.io.KeyboardInput;
 import com.aetsmtl.java8Learning.stream.Person;
 import com.aetsmtl.java8Learning.test.Bar;
 
@@ -190,7 +191,16 @@ public class App
     	// IO 
     	System.out.println(" ");
     	CharStream cs = new CharStream();
-    	cs.testMethod(args);
+    	//cs.testMethod(args);
+    	
+    	// first version BufferedReader io
+    	System.out.println(" ");
+    	KeyboardInput ki = new KeyboardInput();
+    	ki.testMethod();
+    	
+    	ki.testMethodWithChannel();
+    	
+    	
     	
     }
 
